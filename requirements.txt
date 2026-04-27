@@ -1,0 +1,6 @@
+Flask
+pymongo
+PyJWT
+pydantic
+python-dotenv
+pwdlib[argon2]
