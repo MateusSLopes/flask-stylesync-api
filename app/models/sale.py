@@ -1,7 +1,10 @@
 from pydantic import BaseModel
 from datetime import date
 
-class Sale(BaseModel):
+from app.models.model_dump import MongoBaseModel
+
+
+class Sale(MongoBaseModel, BaseModel):
     sale_date: date
     product_id: str
     quantity: int
