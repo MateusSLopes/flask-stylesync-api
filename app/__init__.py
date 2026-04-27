@@ -14,7 +14,14 @@ def create_app():
     except Exception as e:
         print(f'Erro ao realizar a conexão com o banco de dados: {e}')
 
-    from .routes.main import main_bp
-    app.register_blueprint(main_bp)
+    from .routes.auth import auth_bp
+    from .routes.products import products_bp
+    from .routes.sales import sales_bp
+    from .routes.users import users_bp
+
+    app.register_blueprint(auth_bp)
+    app.register_blueprint(products_bp)
+    app.register_blueprint(sales_bp)
+    app.register_blueprint(users_bp)
 
     return app
